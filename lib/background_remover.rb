@@ -1,0 +1,2 @@
+module BackgroundRemover
+end
