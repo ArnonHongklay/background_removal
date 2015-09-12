@@ -1,7 +1,7 @@
-require 'test_helper'
+require 'spec_helper'
 
-class BackgroundRemoverTest < ActiveSupport::TestCase
-  test "truth" do
-    assert_kind_of Module, BackgroundRemover
+describe BackgroundRemover do
+  it "is true" do
+    expect(true).to be_true
   end
 end
