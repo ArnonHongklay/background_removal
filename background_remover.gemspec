@@ -7,11 +7,11 @@ require "background_remover/version"
 Gem::Specification.new do |s|
   s.name        = "background_remover"
   s.version     = BackgroundRemover::VERSION
-  s.authors     = ["-_-! "]
+  s.authors     = ["Non Madden"]
   s.email       = ["nonmadden@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of BackgroundRemover."
-  s.description = "TODO: Description of BackgroundRemover."
+  s.homepage    = "https://nonmadden.com"
+  s.summary     = "Summary of BackgroundRemover."
+  # s.description = "TODO: Description of BackgroundRemover."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
@@ -20,4 +20,6 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "~> 4.2.4"
 
   s.add_development_dependency "sqlite3"
+  s.add_development_dependency "rspec-rails"
+  s.add_development_dependency "rmagick"
 end
