@@ -1,7 +1,7 @@
 *.rbc
 capybara-*.html
 .rspec
-log/*.log
+log/
 /tmp
 /db/*.sqlite3
 /db/*.sqlite3-journal
@@ -34,3 +34,5 @@ bower.json
 # Ignore pow environment settings
 .powenv
 pkg/
+
+spec/dummy/db/
