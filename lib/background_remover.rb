@@ -1,4 +1,5 @@
 require 'background_remover/core_ext'
+require 'background_remover/load_image'
 
 module BackgroundRemover
   class Base
