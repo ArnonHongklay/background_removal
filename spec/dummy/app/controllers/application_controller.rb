@@ -4,7 +4,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def index
-    # raise BackgroundRemover::Base.new.inspect
-    render html: "xxx"
+
   end
 end
