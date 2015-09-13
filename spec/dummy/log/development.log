@@ -1,0 +1,13 @@
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-13 08:43:38 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/nonmadden/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (4.2ms)
+Completed 200 OK in 42ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2015-09-13 08:43:40 +0700
+Processing by Rails::InfoController#properties as */*
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  Rendered /Users/nonmadden/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.4/lib/rails/templates/rails/info/properties.html.erb (0.7ms)
+Completed 200 OK in 101ms (Views: 49.4ms | ActiveRecord: 1.9ms)
