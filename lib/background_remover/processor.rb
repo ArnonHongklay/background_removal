@@ -1,9 +1,9 @@
-module BGRM
+module BackgroundRemover
   class Processor
     attr_accessor :path
 
     def initialize(path)
-      raise "Please put path to BGRM::Processor(path)" unless path.nil?
+      raise "Please put path to BGRM::Processor(path)" if path.nil?
 
       self.path = path
 
