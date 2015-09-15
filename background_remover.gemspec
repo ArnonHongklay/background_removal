@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
                   DESC"
   # s.license     = "MIT"
 
-  s.rubyforge_project = "BGRM"
+  s.rubyforge_project = "BackgroundRemover"
   s.files             = `git ls-files`.split("\n")
   s.test_files        = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables       = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
@@ -22,6 +22,7 @@ Gem::Specification.new do |s|
   s.require_paths     = ["lib"]
 
   s.add_dependency "rails", "~> 4.2.4"
+  s.add_dependency "sqlite3"
   s.add_development_dependency "rspec-rails"
   s.add_development_dependency "mechanize"
   s.add_development_dependency "rmagick"
