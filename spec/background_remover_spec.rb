@@ -1,11 +1,16 @@
 require 'rails_helper'
 
 describe BackgroundRemover do
-  it "is true" do
-    expect(true).to be_truthy
+  describe "BackgroundRemover::Loader" do
+    it "should have a Load object" do
+      # instance = BackgroundRemover::Loader.new
+      # expect(instance).to receive(:initialize).with("BackgroundRemover", "xxxx").and_return("BackgroundRemover")
+    end
   end
 
-  it "has the name BackgroundRemover" do
-    expect(BackgroundRemover::Base.instance.name).to eql("BackgroundRemover")
+  describe "BackgroundRemover::Processor" do
+    it "should have a Processor object" do
+      # expect(BackgroundRemover::Processor).to receive(:initialize).with("BackgroundRemover")
+    end
   end
 end

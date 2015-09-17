@@ -3,6 +3,7 @@ PATH
   specs:
     background_remover (0.0.1)
       rails (~> 4.2.4)
+      sqlite3
 
 GEM
   remote: https://rubygems.org/
@@ -45,20 +46,36 @@ GEM
     arel (6.0.3)
     builder (3.2.2)
     diff-lcs (1.2.5)
+    domain_name (0.5.24)
+      unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    http-cookie (1.0.2)
+      domain_name (~> 0.5)
     i18n (0.7.0)
     json (1.8.3)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    mechanize (2.7.3)
+      domain_name (~> 0.5, >= 0.5.1)
+      http-cookie (~> 1.0)
+      mime-types (~> 2.0)
+      net-http-digest_auth (~> 1.1, >= 1.1.1)
+      net-http-persistent (~> 2.5, >= 2.5.2)
+      nokogiri (~> 1.4)
+      ntlm-http (~> 0.1, >= 0.1.1)
+      webrobots (>= 0.0.9, < 0.2)
     mime-types (2.6.1)
     mini_portile (0.6.2)
     minitest (5.8.0)
+    net-http-digest_auth (1.4)
+    net-http-persistent (2.9.4)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
+    ntlm-http (0.1.1)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -116,15 +133,19 @@ GEM
     thread_safe (0.3.5)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.1)
+    webrobots (0.1.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   background_remover!
+  mechanize
   rmagick
   rspec-rails
-  sqlite3
 
 BUNDLED WITH
    1.10.5
