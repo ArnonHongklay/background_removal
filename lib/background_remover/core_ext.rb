@@ -13,7 +13,11 @@ module BackgroundRemover
   #   self.processor(img)
   # end
 
-  def self.processor(img)
-    ps = BackgroundRemover::Processor.new(img, @path)
+  def self.processor(img, flag=nil)
+    if flag.nil?
+      BackgroundRemover::Processor.new(img, @path)
+    else
+      BackgroundRemover::Processor_with_flag.new(img, flag, @path)
+    end
   end
 end
