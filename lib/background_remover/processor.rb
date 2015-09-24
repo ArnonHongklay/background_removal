@@ -1,6 +1,6 @@
 module BackgroundRemover
   class Processor
-    attr_accessor :img_original, :img_finalize
+    # attr_accessor :img_original, :img_finalize
 
     def initialize(img, path)
       raise "Please put path to processor(img, path)" if img.nil? and path.nil?
@@ -28,6 +28,21 @@ module BackgroundRemover
       width = temp.split(/x/)[0]
       `convert #{img} -fuzz 15% -fill none -draw "matte #{width.to_i-10},10 floodfill" #{path}/#{filename.split(/\./)[0]}.png`
       `convert #{path}/#{filename.split(/\./)[0]}.png -fuzz 15% -fill none -draw "matte 10,10 floodfill" #{path}/#{filename.split(/\./)[0]}.png`
+    end
+  end
+end
+
+module BackgroundRemover
+  class Processor_with_flag
+
+    def initialize(img, flag, path)
+      raise "Please put path to processor(img, path)" if img.nil? and flag.nil? and path.nil?
+      agent = Mechanize.new
+      filename = agent.get(img).filename
+
+      `DRILL=10`
+      `convert "#{img}" -bordercolor white -border 1x1 -matte -fill none -fuzz $DRILL% -draw "matte 1,1 floodfill" -shave 1x1 #{path}/#{filename.split(/\./)[0]}.png`
+      # `composite -compose Dst_Over -tile pattern:checkerboard "#{@img_finalize}" "#{path_finalize}/check-#{temp}"`
     end
   end
 end
