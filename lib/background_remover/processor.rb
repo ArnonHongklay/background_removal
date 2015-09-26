@@ -22,7 +22,7 @@ module BackgroundRemover
       `convert #{path}/#{filename.split(/\./)[0]}.png -fuzz #{drill}% -fill none -draw "matte 10,10 floodfill" #{path}/#{filename.split(/\./)[0]}.png`
       `convert #{path}/#{filename.split(/\./)[0]}.png -fuzz #{drill}% -fill none -draw "matte 10,#{height.to_i-10} floodfill" #{path}/#{filename.split(/\./)[0]}.png`
       `convert #{path}/#{filename.split(/\./)[0]}.png -fuzz #{drill}% -fill none -draw "matte #{width.to_i-10},#{height.to_i-10} floodfill" #{path}/#{filename.split(/\./)[0]}.png`
-      `composite -compose Dst_Over -tile pattern:checkerboard #{path}/#{filename.split(/\./)[0]}.png #{path}/#{filename.split(/\./)[0]}.png`
+      # `composite -compose Dst_Over -tile pattern:checkerboard #{path}/#{filename.split(/\./)[0]}.png #{path}/#{filename.split(/\./)[0]}.png`
     end
   end
 end
