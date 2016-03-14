@@ -8,9 +8,10 @@ Gem::Specification.new do |s|
   s.authors     = ["Non Madden"]
   s.email       = ["nonmadden@gmail.com"]
   s.homepage    = "https://nonmadden.com"
-  s.summary     = "Summary of BackgroundRemover."
+  s.summary     = "This gem is a wrapper to remove image background"
   s.description = "<<-DESC
                     This gem is a wrapper to remove image background
+                    BackgroundRemover is libary for remove background image from all file type to png file
                   DESC"
   # s.license     = "MIT"
 
