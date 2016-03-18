@@ -5,7 +5,8 @@ module BackgroundRemover
   # @path_finalize = nil
 
   class << self
-    attr_accessor :path # :path_original, :path_finalize
+    attr_accessor :path 
+    # :path_original, :path_finalize
   end
 
   def self.processor(img, flag=nil)

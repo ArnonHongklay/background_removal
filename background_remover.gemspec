@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
                     This gem is a wrapper to remove image background
                     BackgroundRemover is libary for remove background image from all file type to png file
                   DESC"
-  # s.license     = "MIT"
+  s.license     = "MIT"
 
   s.rubyforge_project = "BackgroundRemover"
   s.files             = `git ls-files`.split("\n")
