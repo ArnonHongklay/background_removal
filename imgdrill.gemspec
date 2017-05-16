@@ -1,29 +1,31 @@
-# -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "background_remover/version"
 
+# Maintain your gem's version:
+require "imgdrill/version"
+
+# Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "background_remover"
-  s.version     = BackgroundRemover::VERSION
-  s.authors     = ["Non Madden"]
-  s.email       = ["nonmadden@gmail.com"]
-  s.homepage    = "https://nonmadden.com"
+  s.name        = "imgdrill"
+  s.version     = Imgdrill::VERSION
+  s.authors     = ["Arnon Hongklay"]
+  s.email       = ["arnon@hongklay.com"]
+  s.homepage    = "https://arnon.hongklay.com"
   s.summary     = "This gem is a wrapper to remove image background"
   s.description = "<<-DESC
-                    This gem is a wrapper to remove image background
-                    BackgroundRemover is libary for remove background image from all file type to png file
-                  DESC"
+    This gem is a wrapper to drill image  background is libary for remove background image from all file type to png file
+  DESC"
   s.license     = "MIT"
 
-  s.rubyforge_project = "BackgroundRemover"
+  s.rubyforge_project = "ImgDrill"
   s.files             = `git ls-files`.split("\n")
   s.test_files        = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables       = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   # s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.require_paths     = ["lib"]
 
-  s.add_dependency "rails", "~> 4.2.4"
+  s.add_dependency "rails", "~> 5.1.1"
   s.add_dependency "sqlite3"
+  s.add_development_dependency "pg"
   s.add_development_dependency "rspec-rails"
   s.add_development_dependency "mechanize"
   s.add_development_dependency "rmagick"

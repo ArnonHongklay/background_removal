@@ -1,4 +1,4 @@
-module BackgroundRemover
+module Imgdrill
   class Processor
     # attr_accessor :img_original, :img_finalize
 

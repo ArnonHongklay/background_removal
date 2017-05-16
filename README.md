@@ -1,12 +1,31 @@
-# Image Background Remover
+# Imgdrill
+Short description and motivation.
 
-This project rocks and uses MIT-LICENSE.
+## Usage
+How to use my plugin.
 
-## How to install
+## Installation
+Add this line to your application's Gemfile:
 
+```ruby
+gem 'imgdrill'
 ```
-gem install imgdrill
+
+And then execute:
+```bash
+$ bundle
 ```
+
+Or install it yourself as:
+```bash
+$ gem install imgdrill
+```
+
+## Contributing
+Contribution directions go here.
+
+## License
+The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
 ## How to Configure
 
@@ -22,7 +41,7 @@ BackgroundRemover.path = Rails.root.join("tmp")
 BackgroundRemover.processor("http://www.trollheaven.com/wp-content/uploads/2015/02/esq-00-women-pp.jpg")
 ```
 
-### Original 
+### Original
 
 ![http://www.trollheaven.com/wp-content/uploads/2015/02/esq-00-women-pp.jpg](http://www.trollheaven.com/wp-content/uploads/2015/02/esq-00-women-pp.jpg)
 
