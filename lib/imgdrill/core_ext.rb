@@ -1,11 +1,11 @@
-module BackgroundRemover
+module Imgdrill
   @path = "./"
 
   # @path_original = nil
   # @path_finalize = nil
 
   class << self
-    attr_accessor :path 
+    attr_accessor :path
     # :path_original, :path_finalize
   end
 
