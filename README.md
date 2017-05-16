@@ -5,7 +5,7 @@ This project rocks and uses MIT-LICENSE.
 ## How to install
 
 ```
-gem install background_remover
+gem install imgdrill
 ```
 
 ## How to Configure
