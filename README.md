@@ -22,7 +22,7 @@ BackgroundRemover.path = Rails.root.join("tmp")
 BackgroundRemover.processor("http://www.trollheaven.com/wp-content/uploads/2015/02/esq-00-women-pp.jpg")
 ```
 
-### Original 
+### Original
 
 ![http://www.trollheaven.com/wp-content/uploads/2015/02/esq-00-women-pp.jpg](http://www.trollheaven.com/wp-content/uploads/2015/02/esq-00-women-pp.jpg)
 
