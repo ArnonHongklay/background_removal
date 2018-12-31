@@ -1,5 +1,5 @@
-module Imgdrill
-  @path = "./"
+module BackgroundRemoval
+  @path = './'
 
   # @path_original = nil
   # @path_finalize = nil
@@ -9,7 +9,7 @@ module Imgdrill
     # :path_original, :path_finalize
   end
 
-  def self.processor(img, flag=nil)
+  def self.processor(img, flag = nil)
     if flag.nil?
       BackgroundRemover::Processor.new(img, @path)
     else

@@ -1,9 +1,9 @@
-module Imgdrill
+module BackgroundRemoval
   class Processor
     # attr_accessor :img_original, :img_finalize
 
     def initialize(img, path)
-      raise "Please put path to processor(img, path)" if img.nil? and path.nil?
+      raise 'Please put path to processor(img, path)' if img.nil? && path.nil?
 
       # http://www.boohoo.com/content/ebiz/boohoo/invt/dzz98777/dzz98777_black_default_l.jpg
       # http://images.asos-media.com/inv/media/8/1/6/1/5641618/black/image1xxl.jpg
@@ -15,13 +15,13 @@ module Imgdrill
       filename = agent.get(img).filename
       temp = `identify #{img} | awk '{print $3}'`
       width = temp.split(/x/)[0]
-      height = temp.split(/x/)[0].gsub("\n","")
+      height = temp.split(/x/)[0].delete("\n")
       drill = 10
 
-      `convert #{img} -fuzz #{drill}% -fill none -draw "matte #{width.to_i-10},10 floodfill" #{path}/#{filename.split(/\./)[0]}.png`
+      `convert #{img} -fuzz #{drill}% -fill none -draw "matte #{width.to_i - 10},10 floodfill" #{path}/#{filename.split(/\./)[0]}.png`
       `convert #{path}/#{filename.split(/\./)[0]}.png -fuzz #{drill}% -fill none -draw "matte 10,10 floodfill" #{path}/#{filename.split(/\./)[0]}.png`
-      `convert #{path}/#{filename.split(/\./)[0]}.png -fuzz #{drill}% -fill none -draw "matte 10,#{height.to_i-10} floodfill" #{path}/#{filename.split(/\./)[0]}.png`
-      `convert #{path}/#{filename.split(/\./)[0]}.png -fuzz #{drill}% -fill none -draw "matte #{width.to_i-10},#{height.to_i-10} floodfill" #{path}/#{filename.split(/\./)[0]}.png`
+      `convert #{path}/#{filename.split(/\./)[0]}.png -fuzz #{drill}% -fill none -draw "matte 10,#{height.to_i - 10} floodfill" #{path}/#{filename.split(/\./)[0]}.png`
+      `convert #{path}/#{filename.split(/\./)[0]}.png -fuzz #{drill}% -fill none -draw "matte #{width.to_i - 10},#{height.to_i - 10} floodfill" #{path}/#{filename.split(/\./)[0]}.png`
       # `composite -compose Dst_Over -tile pattern:checkerboard #{path}/#{filename.split(/\./)[0]}.png #{path}/#{filename.split(/\./)[0]}.png`
     end
   end
@@ -29,9 +29,9 @@ end
 
 module BackgroundRemover
   class Processor_with_flag
-
     def initialize(img, flag, path)
-      raise "Please put path to processor(img, path)" if img.nil? and flag.nil? and path.nil?
+      raise 'Please put path to processor(img, path)' if img.nil? && flag.nil? && path.nil?
+
       agent = Mechanize.new
       filename = agent.get(img).filename
 

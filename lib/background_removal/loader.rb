@@ -1,4 +1,4 @@
-# module Imgdrill
+# module BackgroundRemoval
 #   class Loader
 #     attr_accessor :img, :filename
 #

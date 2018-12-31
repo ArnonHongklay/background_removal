@@ -1,11 +1,11 @@
 $:.push File.expand_path("../lib", __FILE__)
 
 # Maintain your gem's version:
-require "imgdrill/version"
+require "background_removal/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "imgdrill"
+  s.name        = "background_removal"
   s.version     = Imgdrill::VERSION
   s.authors     = ["Arnon Hongklay"]
   s.email       = ["arnon@hongklay.com"]
