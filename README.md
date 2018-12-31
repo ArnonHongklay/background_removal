@@ -29,7 +29,7 @@ The gem is available as open source under the terms of the [MIT License](http://
 
 ## How to Configure
 
-at config/initializers/background_remover.rb
+at config/initializers/background_removal.rb
 
 ```
 BackgroundRemoval.path = Rails.root.join("tmp")
