@@ -1,4 +1,4 @@
-# Imgdrill
+# Background Removal
 Short description and motivation.
 
 ## Usage
@@ -8,7 +8,7 @@ How to use my plugin.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'imgdrill'
+gem 'background-removal'
 ```
 
 And then execute:
@@ -18,7 +18,7 @@ $ bundle
 
 Or install it yourself as:
 ```bash
-$ gem install imgdrill
+$ gem install background-removal
 ```
 
 ## Contributing
@@ -32,13 +32,13 @@ The gem is available as open source under the terms of the [MIT License](http://
 at config/initializers/background_remover.rb
 
 ```
-BackgroundRemover.path = Rails.root.join("tmp")
+BackgroundRemoval.path = Rails.root.join("tmp")
 ```
 
 ## Test
 
 ```
-BackgroundRemover.processor("http://www.trollheaven.com/wp-content/uploads/2015/02/esq-00-women-pp.jpg")
+BackgroundRemoval.processor("http://www.trollheaven.com/wp-content/uploads/2015/02/esq-00-women-pp.jpg")
 ```
 
 ### Original
