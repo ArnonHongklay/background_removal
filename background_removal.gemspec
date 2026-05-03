@@ -23,10 +23,13 @@ Gem::Specification.new do |s|
   # s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.require_paths     = ['lib']
 
-  s.add_dependency 'rails', '~> 5.1.1'
-  s.add_dependency 'sqlite3'
-  s.add_development_dependency 'mechanize'
-  s.add_development_dependency 'pg'
-  s.add_development_dependency 'rmagick'
-  s.add_development_dependency 'rspec-rails'
+  s.required_ruby_version = '>= 3.1'
+
+  s.add_dependency 'rails', '~> 7.1'
+  s.add_dependency 'sqlite3', '~> 1.7'
+
+  s.add_development_dependency 'mechanize', '~> 2.14'
+  s.add_development_dependency 'pg', '~> 1.6'
+  s.add_development_dependency 'rmagick', '~> 6.1'
+  s.add_development_dependency 'rspec-rails', '~> 8.0'
 end
